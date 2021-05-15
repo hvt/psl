@@ -576,9 +576,12 @@ final class Loader
         'Psl\IO\SeekReadWriteHandleInterface',
         'Psl\IO\SeekWriteHandleInterface',
         'Psl\IO\WriteHandleInterface',
+        'Psl\RandomSequence\SequenceInterface',
     ];
 
-    public const TRAITS = [];
+    public const TRAITS = [
+        'Psl\RandomSequence\Internal\MersenneTwisterTrait',
+    ];
 
     public const CLASSES = [
         'Psl\Exception\InvariantViolationException',
@@ -651,6 +654,9 @@ final class Loader
         'Psl\IO\Writer',
         'Psl\IO\Reader',
         'Psl\IO\MemoryHandle',
+        'Psl\RandomSequence\MersenneTwisterSequence',
+        'Psl\RandomSequence\MersenneTwisterPHPVariantSequence',
+        'Psl\RandomSequence\SecureSequence',
     ];
 
     public const TYPE_CONSTANTS = 1;
